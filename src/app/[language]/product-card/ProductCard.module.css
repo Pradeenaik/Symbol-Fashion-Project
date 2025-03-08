@@ -1,0 +1,61 @@
+.productCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  background: white;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.productDetails {
+  padding: 10px;
+}
+
+.productTitle {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.productBrand {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.productPrice {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 5px;
+}
+
+.discountedPrice {
+  color: red;
+  font-size: 1.2rem;
+}
+
+.discountBadge {
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.productStock {
+  font-size: 0.9rem;
+  color: green;
+}

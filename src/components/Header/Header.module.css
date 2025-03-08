@@ -1,0 +1,103 @@
+/* Header.module.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out padding 0.3s ease-in-out;
+}
+
+.sticky {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px 20px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 14px;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sticky .topBar {
+  display: none;
+}
+
+.topBar nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.customer {
+  font-weight: bold;
+  position: absolute; /* Position the logo absolutely within .navBar */
+  left: 70%; /* Move logo to the center */
+  transform: translateX(-50%);
+}
+
+.contact {
+  font-weight: bold;
+  position: absolute; /* Position the logo absolutely within .navBar */
+  left: 80%; /* Move logo to the center */
+  transform: translateX(-50%);
+}
+
+.region{
+  width: 32px;
+  height: 20px;
+  position: absolute;
+  right: 5%;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.logo {
+  height: 40px;
+  position: absolute; /* Position the logo absolutely within .navBar */
+  left: 50%; /* Move logo to the center */
+  top: 15px;
+  transform: translateX(-50%); /* Adjust for exact centering */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.searchBar input {
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  transition: color 0.2s ease-in-out;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #ccc;
+}
