@@ -73,10 +73,12 @@ const BackgroundNav: React.FC<BackgroundNavProps> = ({ images }) => {
     <>
       {/* Background Slider */}
       <div className={styles.container}>
+      <Link href="/product-card" passHref className={styles.customLink}>
         <div
           className={styles.background}
-          style={{ backgroundImage: `url(${images[currentIndex]})` }}
-        ></div>
+          style={{ backgroundImage: `url(${images[currentIndex]})` }}>
+        </div>
+        </Link>
         <button className={`${styles.navButton} ${styles.prevButton}`} onClick={handlePrev}>
           &lt;
         </button>
@@ -114,9 +116,11 @@ const BackgroundNav: React.FC<BackgroundNavProps> = ({ images }) => {
       <section className={styles.brandsSection}>
         <div className={styles.brandsGrid}>
           {additionalBrands.map((brand) => (
-            <div key={brand.name} className={styles.brandCard}>
-              <img src={brand.logo} alt={brand.name} className={styles.brandLogo} />
-            </div>
+            <Link href="/product-card" passHref className={styles.customLink}>
+              <div key={brand.name} className={styles.brandCard}>
+                <img src={brand.logo} alt={brand.name} className={styles.brandLogo} />
+              </div>
+            </Link>
           ))}
         </div>
         <div className={styles.buttonContainer}>
@@ -125,9 +129,6 @@ const BackgroundNav: React.FC<BackgroundNavProps> = ({ images }) => {
       </section>
       {/* Product Section */}
       <section className={styles.productSection}>
-      <Link href="/product-card">
-        <button style={{ padding: "10px", fontSize: "16px" }}>Go to Product Card</button>
-      </Link>
         <h2 className={styles.productHeading}>Popular Categories</h2>
         <div className={styles.productSlider}>
           <button className={styles.sliderButton} onClick={handleProductPrev}>
@@ -135,10 +136,12 @@ const BackgroundNav: React.FC<BackgroundNavProps> = ({ images }) => {
           </button>
           <div className={styles.productGrid}>
             {products.slice(productIndex, productIndex + 4).map((product) => (
-              <div key={product.id} className={styles.productCard}>
-                <img src={product.imageUrl} alt={product.name} className={styles.productImage} />
-                <p className={styles.productName}>{product.name}</p>
-              </div>
+              <Link href="/product-card" passHref className={styles.customLink}>
+                <div key={product.id} className={styles.productCard}>
+                  <img src={product.imageUrl} alt={product.name} className={styles.productImage} />
+                  <p className={styles.productName}>{product.name}</p>
+                </div>
+              </Link>
             ))}
           </div>
           <button className={styles.sliderButton} onClick={handleProductNext}>
@@ -157,9 +160,11 @@ const BackgroundNav: React.FC<BackgroundNavProps> = ({ images }) => {
           </button>
           <div className={styles.newInGrid}>
             {newInProducts.slice(newInIndex, newInIndex + 3).map((product) => (
+              <Link href="/product-card" passHref className={styles.customLink}>
               <div key={product.id} className={styles.newInCard}>
                 <img src={product.imageUrl} alt={product.name} className={styles.newInImage} />
               </div>
+              </Link>
             ))}
           </div>
           <button className={styles.sliderButton} onClick={handleNewInNext}>
@@ -174,8 +179,10 @@ const BackgroundNav: React.FC<BackgroundNavProps> = ({ images }) => {
         <div className={styles.actualGrid}>
           {actualProducts.slice(0, 3).map((product) => (
             <div key={product.id} className={styles.actualCard}>
+              <Link href="/product-card" passHref className={styles.customLink}>
               <img src={product.imageUrl} alt={product.name} className={styles.actualImage} />
               <p className={styles.actualName}>{product.name}</p>
+              </Link>
             </div>
           ))}
         </div>
@@ -190,10 +197,12 @@ const BackgroundNav: React.FC<BackgroundNavProps> = ({ images }) => {
           </button>
           <div className={styles.featuredGrid}>
             {featuredProducts.slice(featuredIndex, featuredIndex + 3).map((product) => (
+              <Link href="/product-card" passHref className={styles.customLink}>
               <div key={product.id} className={styles.featuredCard}>
                 <img src={product.imageUrl} alt={product.name} className={styles.featuredImage} />
                 {/* <p className={styles.featuredName}>{product.name}</p> */}
               </div>
+              </Link>
             ))}
           </div>
           <button className={styles.sliderButton} onClick={handleFeaturedNext}>
@@ -211,11 +220,13 @@ const BackgroundNav: React.FC<BackgroundNavProps> = ({ images }) => {
           </button>
           <div className={styles.recommendedGrid}>
             {recommendedProducts.slice(recommendedIndex, recommendedIndex + 3).map((product) => (
+              <Link href="/product-card" passHref className={styles.customLink}>
               <div key={product.id} className={styles.recommendedCard}>
                 <img src={product.imageUrl} alt={product.name} className={styles.recommendedImage} />
                 <p className={styles.recommendedName}>{product.name}</p>
                 <p className={styles.recommendedPrice}>{product.price}</p> {/* Add price tag */}
               </div>
+              </Link>
             ))}
           </div>
           <button className={styles.sliderButton} onClick={handleRecommendedNext}>

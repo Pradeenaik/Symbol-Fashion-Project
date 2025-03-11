@@ -16,6 +16,7 @@
   background-position: center;
   position: relative;
   transition: background-image 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .navButton {
@@ -271,6 +272,7 @@
   padding: 40px 0;
   background-color: #E7E7E7;
   margin-top: 80px;
+  cursor: pointer;
 }
 
 .newInHeading {
@@ -333,7 +335,7 @@
 
 /* Left side (Big Image) */
 .actualCard:first-child {
-  grid-row: span 2; /* Makes the first item take full height */
+  grid-row: span 2 !important; /* Makes the first item take full height */
   width: 80%;
   padding-top: 80px;
 }
@@ -345,6 +347,7 @@
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  cursor: pointer;
 }
 
 
@@ -475,6 +478,7 @@
   transition: transform 0.3s ease-in-out;
   flex: 0 0 auto;
   width: calc((100% - 60px) / 3); /* Adjust based on the number of images */
+  cursor: pointer;
 }
 
 .featuredCard:hover {
@@ -534,6 +538,7 @@
   border-radius: 10px;
   margin-top: 0;
   padding-top: 0;
+  cursor: pointer;
 }
 
 .recommendedCard:hover {
@@ -585,4 +590,12 @@
 .sliderButton:hover {
   background-color: rgba(255, 255, 255, 1);
 }
+
+/* Custom styling for Link to prevent global styles */
+.customLink {
+  all: unset;  /* Reset all global styles */
+  text-decoration: none; /* Remove any unwanted underline */
+  display: contents;
+}
+
 
